@@ -1,0 +1,29 @@
+SHOW DATABASES;
+SELECT DATABASE();
+SHOW TABLES;
+CREATE DATABASE name_new_base;
+DROP DATABASE name_base;
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_pass'); - Создание пароля пользователю root.
+GRANT ALL ON new_data.* TO 'testUSER'@'localhost' IDENTIFIED BY '123'; - Создание пользователя с доступом к определенной базе данных.
+
+CREATE TABLE english ( -- Создание таблици
+    -> id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    -> eng VARCHAR(255) NOT NULL,
+    -> rus VARCHAR(255) NOT NULL,
+    -> PRIMARY KEY(id)
+    -> );
+DROP TABLE name_table;
+
+DECT name_table;
+INSERT INTO name_table(name,name) VALUES ('sad','asdd'); - Добовления значения в таблицу.
+
+
+SELECT * FROM table; - Просмотр данных указанных в таблици.
+ALTER TABLE name CHANGE name title VARCHAR(255) NOT NULL; - Переименовать столбец в таблици.
+ALTER TABLE name_table RENAME new_name_table; - Переименовать таблицу.
+ALTER TABLE name_table ADD `name столбеца` и его типы данных; - Добавление столбца в таблицу.
+ALTER TABLE name_table MODIFY `имя столбца` типы данных; - Модификация столбца таблици.
+ALTER TABLE name_table DROP `имя столбца`; - Удалить столбец.
+
+UPDATE name_T SET `title` = '1' WHERE name = 'name'; 
+DELETE FROM name_T WHERE id = 2;
